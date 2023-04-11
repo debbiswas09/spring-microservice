@@ -27,12 +27,13 @@ public class CurrencyExchange {
 		super();
 	}
 	
-	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple) {
+	public CurrencyExchange(Long id, String from, String to, BigDecimal conversionMultiple,String environment) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
 		this.conversionMultiple = conversionMultiple;
+		this.environment = environment;
 	}
 
 	public Long getId() {
