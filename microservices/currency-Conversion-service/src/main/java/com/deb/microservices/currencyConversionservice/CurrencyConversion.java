@@ -1,31 +1,30 @@
-package com.deb.microservices.currencyConversionservice;
+package com.deb.microservices.currencyconversionservice;
 
 import java.math.BigDecimal;
 
 public class CurrencyConversion {
-	
 	private Long id;
 	private String from;
 	private String to;
 	private BigDecimal quantity;
 	private BigDecimal conversionMultiple;
-	private BigDecimal totalClaculatedAmount;
+	private BigDecimal totalCalculatedAmount;
 	private String environment;
+
+	public CurrencyConversion() {
+		
+	}
 	
-	public CurrencyConversion(Long id, String from, String to,BigDecimal quantity, BigDecimal conversionMultiple, 
-			BigDecimal totalClaculatedAmount, String environment) {
+	public CurrencyConversion(Long id, String from, String to, BigDecimal quantity, BigDecimal conversionMultiple, 
+			BigDecimal totalCalculatedAmount, String environment) {
 		super();
 		this.id = id;
 		this.from = from;
 		this.to = to;
 		this.conversionMultiple = conversionMultiple;
 		this.quantity = quantity;
-		this.totalClaculatedAmount = totalClaculatedAmount;
+		this.totalCalculatedAmount = totalCalculatedAmount;
 		this.environment = environment;
-	}
-
-	public CurrencyConversion() {
-		super();
 	}
 
 	public Long getId() {
@@ -56,8 +55,8 @@ public class CurrencyConversion {
 		return conversionMultiple;
 	}
 
-	public void setConversionMultiple(BigDecimal conversionmultiple) {
-		this.conversionMultiple = conversionmultiple;
+	public void setConversionMultiple(BigDecimal conversionMultiple) {
+		this.conversionMultiple = conversionMultiple;
 	}
 
 	public BigDecimal getQuantity() {
@@ -68,12 +67,12 @@ public class CurrencyConversion {
 		this.quantity = quantity;
 	}
 
-	public BigDecimal getTotalClaculatedAmount() {
-		return totalClaculatedAmount;
+	public BigDecimal getTotalCalculatedAmount() {
+		return totalCalculatedAmount;
 	}
 
-	public void setTotalClaculatedAmount(BigDecimal totalClaculatedAmount) {
-		this.totalClaculatedAmount = totalClaculatedAmount;
+	public void setTotalCalculatedAmount(BigDecimal totalCalculatedAmount) {
+		this.totalCalculatedAmount = totalCalculatedAmount;
 	}
 
 	public String getEnvironment() {
