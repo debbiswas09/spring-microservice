@@ -31,7 +31,12 @@ public class CurrencyExchangeController {
 		}
 
 		String port = environment.getProperty("local.server.port");
-		currencyExchange.setEnvironment(port);
+		
+		//Chabge-Kubernetes
+		String host = environment.getProperty("HOSTNAME");
+		String version = "v11";
+		
+		currencyExchange.setEnvironment(port + " " + version + " " + host);
 
 		return currencyExchange;
 
